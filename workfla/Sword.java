@@ -18,6 +18,8 @@ public class Sword extends Actor
             //Greenfoot.stop();
             getWorld().addObject(new Endsword(), getWorld().getWidth()/2, getWorld().getHeight()/2);
             getWorld().addObject(new Wasted(), getWorld().getWidth()/2, getWorld().getHeight()/2);
+            getWorld().addObject(new Score(),getWorld().getWidth()/2,getWorld().getHeight()/2+100);
+            getWorld().addObject(new Retry(),getWorld().getWidth()/2,getWorld().getHeight()/2+150);
             removeTouching(flamingo.class);
         }
     }
@@ -26,6 +28,10 @@ public class Sword extends Actor
         // Add your action code here.
         SwordTouch();
         MoveSword();
+        if(Greenfoot.isKeyDown("enter")){
+            Greenfoot.setWorld(new MyWorld());
+        }else{
+        }
     }    
     public void MoveSword(){
         setLocation(getX()-5,getY());
