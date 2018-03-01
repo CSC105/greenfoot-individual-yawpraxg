@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class As extends World
 {
+    //GreenfootSound stsong;
     private static final String bgImageName = "images/bgw.png";
     private static final double scrollSpeed = 2;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
-
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
     /**
@@ -35,6 +35,9 @@ public class As extends World
         bgImage = new GreenfootImage(getBackground());
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
+        //Greenfoot.start();
+        //stsong = new GreenfootSound("sounds/start.mp3");
+        //stsong.play();
     }
     
     public void act(){

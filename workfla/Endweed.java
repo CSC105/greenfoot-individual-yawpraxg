@@ -8,6 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Endweed extends Actor
 {
+    GreenfootSound stsong = new GreenfootSound("sounds/weed.mp3");
+       public void checkSound()
+    {
+        if(!stsong.isPlaying())
+        {
+            stsong.play();  
+        }
+    }
     /**
      * Act - do whatever the Endweed wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,8 +23,10 @@ public class Endweed extends Actor
     public void act() 
     {
         // Add your action code here.
+        checkSound();
         if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new MyWorld());
+           stsong.stop();
+           Greenfoot.setWorld(new MyWorld());
         }else{
         }
     }    

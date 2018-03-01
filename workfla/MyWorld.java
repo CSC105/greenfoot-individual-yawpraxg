@@ -7,6 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class MyWorld extends World{
+    GreenfootSound runsong;
+    
     private static final String bgImageName = "images/bg.png";
     private static final double scrollSpeed = 2;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
@@ -34,6 +36,9 @@ public class MyWorld extends World{
         prepare();
         addObject(score,977,55);
         Score.score = 0;
+        runsong = new GreenfootSound("sounds/run.mp3");
+        runsong.play();
+        
     }
 
     public void act()
@@ -77,7 +82,6 @@ public class MyWorld extends World{
         }
         else
         {
-            
         }
     }
     
@@ -101,6 +105,7 @@ public class MyWorld extends World{
     public void checkOver(){
         if(getObjects(flamingo.class).isEmpty()){
             over = true;
+            runsong.stop();
         }
     }
     

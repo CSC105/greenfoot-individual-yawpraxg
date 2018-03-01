@@ -8,10 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Endsword extends Actor
 {
-    //Score score = new Score();
-    //public void ScoreOver(){
-    //addObject(new Score(),450,500);
-    //}
+    GreenfootSound stsong = new GreenfootSound("sounds/sword.mp3");
+     public void checkSound()
+    {
+        if(!stsong.isPlaying())
+        {
+            stsong.play();  
+        }
+    }
     /**
      * Act - do whatever the Endsword wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,7 +23,9 @@ public class Endsword extends Actor
     public void act() 
     {
         // Add your action code here.
+        checkSound();
         if(Greenfoot.isKeyDown("enter")){
+            stsong.stop();
             Greenfoot.setWorld(new MyWorld());
         }else{
         }
