@@ -28,10 +28,8 @@ public class Sword extends Actor
         // Add your action code here.
         SwordTouch();
         MoveSword();
-        if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new MyWorld());
-        }else{
-        }
+        
+        
     }    
     public void MoveSword(){
         setLocation(getX()-5,getY());

@@ -48,7 +48,7 @@ public class MyWorld extends World{
             if(counter == 450){
                 Tempu tempu = new Tempu();
                 addObject(tempu, getWidth(),597);
-                counter = Greenfoot.getRandomNumber(40);
+                counter = Greenfoot.getRandomNumber(90);
             }
             counter++;
             if(counter == 1000){
@@ -60,7 +60,7 @@ public class MyWorld extends World{
             if(counter == 700){
                 Fish fish = new Fish();
                 addObject(fish, getWidth(),610);
-                counter = Greenfoot.getRandomNumber(95);
+                counter = Greenfoot.getRandomNumber(100);
             }
             counter++;
             if(counter == 890){

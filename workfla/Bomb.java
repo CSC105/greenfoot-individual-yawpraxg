@@ -29,10 +29,7 @@ public class Bomb extends Actor
         BombTouch();
         MoveBomb();
         
-        if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new MyWorld());
-        }else{
-        }
+     
     }  
     public void MoveBomb(){
         setLocation(getX()-5,getY());

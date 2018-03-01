@@ -28,10 +28,6 @@ public class Weed extends Actor
         // Add your action code here.
         WeedTouch();
         MoveWeed();
-        if(Greenfoot.isKeyDown("enter")){
-            Greenfoot.setWorld(new MyWorld());
-        }else{
-        }
     
     }    
     public void MoveWeed(){
