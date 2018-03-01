@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Endweed extends Actor
 {
-    GreenfootSound stsong = new GreenfootSound("sounds/weed.mp3");
+    GreenfootSound stsong = new GreenfootSound("sounds/weed2.mp3");
        public void checkSound()
     {
         if(!stsong.isPlaying())
