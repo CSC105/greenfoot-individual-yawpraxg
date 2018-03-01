@@ -14,22 +14,22 @@ public class Start extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootSound stsong = new GreenfootSound("sounds/start.mp3");
-       public void checkSound()
-    {
-        if(!stsong.isPlaying())
-        {
-            stsong.play();  
-        }
-    }
+       //public void checkSound()
+    //{
+        //if(!stsong.isPlaying())
+        //{
+            //stsong.play();  
+        //}
+    //}
     public void act() 
     {
         // Add your action code here.
-        checkSound();
+        //checkSound();
         
         setImage(new GreenfootImage("enter to start",24,Color.WHITE,new Color(0,0,0,0)));
         if(Greenfoot.isKeyDown("enter")){
-            stsong.stop();
-            Greenfoot.delay(5);
+            //stsong.stop();
+            //Greenfoot.delay(5);
             Greenfoot.setWorld(new MyWorld());
         }else{
         }
